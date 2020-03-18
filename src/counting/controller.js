@@ -4,7 +4,7 @@ import validate from './validate';
 
 const router = express.Router();
 
-router.post('/counting', validate, async (req, res) => {
+router.post('/', validate, async (req, res) => {
   try {
     const { body } = req;
     const exchange = await getTheExchangeRates();
