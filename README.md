@@ -3,8 +3,8 @@
 
 Awesome factory line manager!
 
-[build-badge]: https://img.shields.io/travis/Elvilius/to-do/master.png?style=flat-square
-[build]: https://travis-ci.org/Elvilius/to-do
+[build-badge]: https://img.shields.io/travis/Elvilius/counting-api/master.png?style=flat-square
+[build]: https://travis-ci.org/Elvilius/counting-api
 
 ## Installation
 Copy `.env.sample` with name `.env` and set variables in it.
