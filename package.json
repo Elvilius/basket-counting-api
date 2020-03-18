@@ -43,6 +43,7 @@
     "babel-eslint": "^10.1.0",
     "bcrypt": "^4.0.1",
     "body-parser": "^1.19.0",
+    "codecov.io": "^0.1.6",
     "cookie-parser": "^1.4.5",
     "dotenv": "^8.2.0",
     "eslint": "^6.8.0",
@@ -66,6 +67,7 @@
     "randomstring": "^1.1.5"
   },
   "devDependencies": {
+    "coveralls": "^3.0.9",
     "jest": "^24.9.0"
   }
 }
