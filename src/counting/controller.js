@@ -1,14 +1,15 @@
 import express from 'express';
 import { getTheExchangeRates, getCartCountingInRubles, getConvertCurrency } from './service';
+import validate from './validate';
 
 const router = express.Router();
 
-router.post('/counting', async (req, res) => {
+router.post('/counting', validate, async (req, res) => {
   try {
     const { body } = req;
     const exchange = await getTheExchangeRates();
     const countingInRubles = getCartCountingInRubles(body, exchange);
-    const convertCurrency = getConvertCurrency(countingInRubles);
+    const convertCurrency = getConvertCurrency(countingInRubles, exchange);
     return res.json({ data: convertCurrency });
   } catch (err) {
     res.status(500);
