@@ -11,14 +11,11 @@ Awesome factory line manager!
 [coveralls]: https://coveralls.io/github/Elvilius/counting-api
 
 ## Installation
-Copy `.env.sample` with name `.env` and set variables in it.
 
 ```bash
 $ npm install
 ```
+
 ```bash
-$ docker-compose up
-```
-```bash
-$ npm run migrate
+$ npm run start
 ```
