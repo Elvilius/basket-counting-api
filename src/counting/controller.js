@@ -3,7 +3,7 @@ import { getTheExchangeRates, getCartCountingInRubles, getConvertCurrency } from
 
 const router = express.Router();
 
-router.post('/counting', async (req, res) => {
+router.post('/counting/', async (req, res) => {
   try {
     const { body } = req;
     const exchange = await getTheExchangeRates();
