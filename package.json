@@ -26,14 +26,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Elvilius/basket-counting-api"
+    "url": "git+https://github.com/Elvilius/counting-api"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Elvilius/basket-counting-api/issue"
+    "url": "https://github.com/Elvilius/counting-api/issue"
   },
-  "homepage": "https://github.com/Elvilius/basket-counting-api#readme",
+  "homepage": "https://github.com/Elvilius/counting-api#readme",
   "dependencies": {
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.7",
