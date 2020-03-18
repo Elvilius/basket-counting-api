@@ -20,10 +20,8 @@ export const getCartCountingInRubles = (cart, exchange) => cart.reduce((acc, ite
   return acc + (quantity * price * Value);
 }, 0);
 
-export const getConvertCurrency = (sum, exchange, currencies = ['RUB', 'EUR', 'USD']) => {
-  currencies.reduce((acc, currency) => {
-    const { Value } = exchange[currency];
-    const convert = (sum / Value).toFixed(2);
-    return { ...acc, [currency]: convert };
-  }, {});
-};
+export const getConvertCurrency = (sum, exchange, currencies = ['RUB', 'EUR', 'USD']) => currencies.reduce((acc, currency) => {
+  const { Value } = exchange[currency];
+  const convert = Number((sum / Value).toFixed(2));
+  return { ...acc, [currency]: convert };
+}, {});
