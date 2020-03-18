@@ -12,14 +12,18 @@ export const getTheExchangeRates = async () => {
   }
 };
 
-export const getCartCountingInRubles = (cart, exchanges) => cart.reduce((acc, item) => {
-  const { quantity, price, currency } = item;
-  if (!(currency in exchanges)) {
-    throw new Error(`invalid currency ${currency}`);
-  }
-  const { Value } = exchanges[currency];
-  return acc + (quantity * price * Value);
-}, 0);
+const getNormalizeCurrency = (currency) => currency.trim().toUpperCase();
+
+export const getCartCountingInRubles = (cart, exchanges) => cart.reduce(
+  (acc, { quantity, price, currency }) => {
+    const normalizeCurrency = getNormalizeCurrency(currency);
+    if (!(normalizeCurrency in exchanges)) {
+      throw new Error(`invalid currency ${currency}`);
+    }
+    const { Value } = exchanges[normalizeCurrency];
+    return acc + (quantity * price * Value);
+  }, 0,
+);
 
 export const getConvertCurrency = (sum, exchanges, currencies = ['RUB', 'EUR', 'USD']) => currencies.reduce((acc, currency) => {
   const { Value } = exchanges[currency];
