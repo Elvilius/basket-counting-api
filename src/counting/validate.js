@@ -13,7 +13,7 @@ export const validateError = (req, res, next) => {
 export default [
   body().isArray(),
   body('*.name').isString(),
-  body('*.quantity').isInt(),
+  body('*.quantity').isNumeric(),
   body('*.currency').isString().trim(),
   body('*.price').isNumeric(),
   validateError,
