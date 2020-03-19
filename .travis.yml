@@ -12,7 +12,7 @@ deploy:
   provider: heroku
   app: "counting-backend-api"
   api_key:
-    secure: "travis encrypt $(heroku auth:token) --add deploy.api_key --pro
+    secure: "7ac50f96-6b78-4714-9063-8ea01781faca"
 
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
