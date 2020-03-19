@@ -1,6 +1,17 @@
 language: node_js
+
 node_js:
-  - node
+  - 10.16.0
+
+branches:
+  only:
+    - master
+
+deploy:
+  provider: heroku
+  app: "counting-backend-api"
+  api_key:
+    secure: "21304809-71f7-4866-92f2-f5e3f9a90a25"
 
 after_success:
   - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
