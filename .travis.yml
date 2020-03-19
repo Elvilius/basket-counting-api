@@ -1,10 +1,13 @@
+sudo: false
+
 language: node_js
 node_js:
-  - 10.16.0
+  - 12.16.1
 
 branches:
   only:
     - master
+
 deploy:
   provider: heroku
   app: "counting-backend-api"
